@@ -1,4 +1,5 @@
 #!/bin/bash
+source /docker-check-app/params.env
 check_app(){
     app=$2
     runtime=${1:-10m}
