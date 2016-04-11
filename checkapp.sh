@@ -9,7 +9,7 @@ check_app(){
     ps -f $apppid
     #Sleep for the specified time.
     sleep $runtime
-    kill $apppid || echo "$app not start" >> output-$review_id
+    kill $apppid || echo "$app not start" >> output-$REVIEW_ID
 }
 apt-get update
 apt-get -y install python python-apt coreutils python-pycurl
