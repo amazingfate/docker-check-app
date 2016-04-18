@@ -12,6 +12,9 @@ check_app(){
     sleep $runtime
     kill $apppid || echo "$app not start" >> output-$REVIEW_ID
 }
+sed -i "s/# zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/g" /etc/locale.gen
+/usr/sbin/locale-gen
+export LC_ALL=zh_CN.UTF-8
 apt-get update
 apt-get -y install python python-apt coreutils python-pycurl
 cd /docker-check-app
