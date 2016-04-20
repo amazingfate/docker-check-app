@@ -26,5 +26,5 @@ apt-get update
 DEBIAN_FRONTEND='noninteractive' apt-get -yq dist-upgrade
 while read apps
 do 
-    check_app 10s $apps
+    check_app 30s $apps
 done < app.list
