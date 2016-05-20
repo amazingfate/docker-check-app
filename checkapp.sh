@@ -23,7 +23,7 @@ rm /etc/apt/sources.list
 mv base.list /etc/apt/sources.list.d/
 mv rpa.list /etc/apt/sources.list.d/
 apt-get update
-DEBIAN_FRONTEND='noninteractive' apt-get -yq dist-upgrade
+DEBIAN_FRONTEND=noninteractive apt-get -yq dist-upgrade
 while read apps
 do 
     check_app 30s $apps
